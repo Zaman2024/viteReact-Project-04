@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import useCurrency from './hooks/useCurrency'
 
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data] = useCurrency(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+  console.log(data);
 
   return (
     <>
